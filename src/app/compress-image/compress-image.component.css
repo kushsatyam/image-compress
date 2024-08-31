@@ -1,0 +1,55 @@
+.loader {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .progress-container {
+    position: relative;
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s;
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 20px; /* Same as progress container height */
+    font-weight: bold;
+  }
+
+  body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .container {
+    margin-top: 30px;
+  }
+  .image-container {
+    margin-bottom: 20px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+  }
+  .image-container p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  

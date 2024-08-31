@@ -1,0 +1,44 @@
+<div class="container" style="min-height: 90vh;">
+    <h1 class="text-center m-5">Image Compression</h1>
+    <div class="col-md-6">
+        <form id="imageForm" class="mb-4" style="display: flex;">
+            <div class="form-group">
+                <label for="imageInput">Select Images:</label>
+                <input type="file" class="form-control" multiple (change)="onImageUpload($event)" name="compressImage">
+            </div>
+            <div style="margin-left: 50px;margin-top: 10px;" >
+                <a class="btn btn-primary btn-lg" role="button" *ngIf="imagePreviews.length" (click)="downloadAllFiles()" >Download Compressed Image</a>
+            </div>
+        </form>
+
+        
+    </div>
+   
+
+
+    <div *ngIf="isLoading" class="loader">
+        Compressing images...
+        <div class="progress-bar" [style.width.%]="progress"></div>
+        <span class="progress-text">{{ getProgressText() }}</span>
+    </div>
+
+
+    <div class="row mt-5 m-5" *ngFor="let image of imagePreviews; let i = index">
+        <!-- <div class="col-md-1">
+            <h4>Compressed Image {{ i + 1 }}</h4>
+        </div> -->
+
+        <div class="col-md-5">
+            <h3 class="text-center">Original Images</h3>
+            <div id="originalImages" class="d-flex flex-wrap justify-content-center"><img [src]="uploadedImage[i]"
+                    alt="Compressed Image Preview" style="max-width: 200px; max-height: 200px;" /> </div>
+        </div>
+        <div class="col-md-5">
+            <h3 class="text-center">Compressed Images</h3>
+            <div id="compressedImages" class="d-flex flex-wrap justify-content-center"><img [src]="image.previewUrl"
+                    alt="Compressed Image Preview" style="max-width: 200px; max-height: 200px;" />
+                <p>Size: {{ image.size }} KB</p>
+            </div>
+        </div>
+    </div>
+</div>

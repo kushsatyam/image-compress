@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  .jumbotron {
+    /* background: linear-gradient(45deg, #007bff, #00d4ff); */
+    /* background-image: url('https://via.placeholder.com/1200x400'); */
+    background-image: url('assets/images/background.jpg');
+    background-size: cover;
+    color: #5c5a5a;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 0;
+  }
+  .jumbotron h1 {
+    font-size: 3.5rem;
+  }
+  .jumbotron p {
+    font-size: 1.5rem;
+  }
+  .features {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+  }
+  .feature-icon {
+    font-size: 4rem;
+    color: #007bff;
+  }
+  .feature-title {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  .feature-description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
